@@ -1,0 +1,14 @@
+{
+  "name": "harmehar-kaur",
+  "version": "1.0.0",
+  "description": "This is a basic website to know about me and everything I can do in the field of web development. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harmehar Kaur",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
