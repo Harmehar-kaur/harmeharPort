@@ -37,9 +37,8 @@
 }
 
 .section-header{
-    /* width:80%; */
+    
     margin:1rem 3rem;
-    /* justify-content: center; */
     text-align: center;
     border-radius: .25rem;
     text-transform: uppercase;
@@ -47,7 +46,7 @@
     font-weight: 400;
     padding-left: 25px;
     padding-right: 25px;
-    /* color: #fff; */
+    color: #070707;
     -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
     clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
     height: 40px;
@@ -72,13 +71,15 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 1rem;
+    /* background-color: rgb(62, 61, 61); */
 }
 
 .card{
     box-sizing: border-box;
     width: 31.5%;
     height: 30rem;
-    background-image: linear-gradient(90deg, #fff, rgb(165, 163, 163));
+    /* background-color: rgb(62, 61, 61); */
+    background-image: linear-gradient(90deg, rgb(62, 61, 61),#fff, rgb(62, 61, 61));
     border: 1px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(6px);
@@ -107,7 +108,9 @@
 .inst-logo {
     width: 80px; /* Set the width of the logo */
     height: 80px; /* Set the height of the logo */
-    margin-bottom: 10px; /* Optional: Adjust margin below the logo */
+    margin-bottom: 6rem; /* Optional: Adjust margin below the logo */
+    margin-top: 0;
+    
 }
 
 .img-logo {
@@ -119,13 +122,13 @@
 
 .skill-header {
     width: 30rem;
-    margin: 1rem 20rem;
+    margin: 1rem 25rem;
     padding-left: 33px;
     padding-right: 33px;
     padding-bottom: 16px;
     padding-top: 16px;
     border-radius: 9px;
-    background: #cacac9;
+    background: rgb(62, 61, 61);
     border: none;
     /* font-family: inherit; */
     text-align: center;
@@ -156,7 +159,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    background: #8a8b8b;
+    background: #000000;
     min-width: 200px;
     border: 0;
     border-radius: 4px;
