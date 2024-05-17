@@ -1,0 +1,302 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e0f7fa;
+    padding-top: 50px; /* Adjust to ensure content is not hidden behind the sticky header */
+}
+
+.content {
+    padding: 20px;
+}
+
+/* About Me Section */
+.about {
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+.fancy {
+background-color: transparent;
+border: 2px solid #000;
+border-radius: 0;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+/* display: inline-block; */
+float:right;
+font-weight: 700;
+letter-spacing: 0.05em;
+margin: 0;
+outline: none;
+overflow: visible;
+padding: 1.25em 2em;
+position: relative;
+text-align: center;
+text-decoration: none;
+text-transform: none;
+transition: all 0.3s ease-in-out;
+user-select: none;
+font-size: 13px;
+}
+
+.fancy::before {
+content: " ";
+width: 1.5625rem;
+height: 2px;
+background: black;
+top: 50%;
+left: 1.5em;
+position: absolute;
+transform: translateY(-50%);
+transform-origin: center;
+transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+font-size: 1.125em;
+line-height: 1.33333em;
+padding-left: 2em;
+display: block;
+text-align: left;
+transition: all 0.3s ease-in-out;
+text-transform: uppercase;
+text-decoration: none;
+color: black;
+}
+
+.fancy .top-key {
+height: 2px;
+width: 1.5625rem;
+top: -2px;
+left: 0.625rem;
+position: absolute;
+background: #e8e8e8;
+transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+height: 2px;
+width: 1.5625rem;
+right: 1.875rem;
+bottom: -2px;
+position: absolute;
+background: #e8e8e8;
+transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+height: 2px;
+width: 0.625rem;
+right: 0.625rem;
+bottom: -2px;
+position: absolute;
+background: #e8e8e8;
+transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+color: white;
+background: black;
+}
+
+.fancy:hover::before {
+width: 0.9375rem;
+background: white;
+}
+
+.fancy:hover .text {
+color: white;
+padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+left: -2px;
+width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+right: 0;
+width: 0;
+}
+
+
+.sub-btn {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    color: #0CA694; /* Change to your desired color */
+    outline: none;
+    padding: 1px 0;
+}
+
+.sub-content > p {
+    margin: 20px 0 auto;
+    color: #00331E; /* Change to your desired color */
+}
+
+.sub-content {
+    height: 0;
+    text-align: justify;
+    font-size: 15px;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.sub-content > a {
+    position: revert;
+    top: 8em !important;
+    color: #0CA694; /* Change to your desired color */
+    padding-bottom: 5px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .inst-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.inst-name, .deg-name {
+    margin: 10px 0;
+}
+
+.deg-name hr {
+    border: 1px solid #00796b;
+}
+
+/* Skills Section */
+.skill-div {
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-in-out forwards 0.4s;
+}
+
+.skill-header {
+    margin-bottom: 10px;
+    color: #00796b;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills .btn {
+    padding: 8px 16px; /* Adjust padding */
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Increase border-radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    align-items: center; /* Center text vertically */
+}
+
+.skills .btn:hover {
+    background-color: #005f56;
+}
+
+.skills .btn i {
+    margin-right: 8px; /* Adjust margin */
+}
+
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* courses.css */
+
+/* Add space between subject containers */
+.subject-container {
+    margin-bottom: 20px;
+}
+
+/* Style each subject container as a separate rectangle */
+.subject-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Adjust font size */
+.subject-container span,
+.subject-container p {
+    font-size: 16px;
+}
+
+/* Style the button */
+.sub-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+}
+
+/* Style the icon */
+.sub-icon {
+    font-size: 20px;
+}
+

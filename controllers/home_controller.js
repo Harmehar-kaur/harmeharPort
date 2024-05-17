@@ -77,7 +77,7 @@ module.exports.contact = function(req,res){
     
 }
 
-module.exports.login=function(req,res){
+module.exports.login = function(req,res){
     try{
         ('courses', {
             title: "Coursework"

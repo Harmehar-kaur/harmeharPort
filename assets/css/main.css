@@ -1,199 +1,157 @@
-.page-container{
-    /* background-color:rgb(165, 163, 163) ; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.bgimage {
-    height:80vh;
-    background: url('../images/bg.avif');
-    background-size:cover;
-    position:relative;
-}
-
-.about-me{
-    display: flex;
-    flex-direction: row;
-    
-}
-
-.about-me .para-about{
-    width:60%;
-    line-height: 1.6rem;
-    background-color: rgb(165, 163, 163);
-    margin: 2rem;
-    padding: 1.5rem;
-}
-
-.about-me .para-about h2{
-    text-align: center;
-}
-
-.sec-abt{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.section-header{
-    
-    margin:1rem 3rem;
-    text-align: center;
-    border-radius: .25rem;
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: 400;
-    padding-left: 25px;
-    padding-right: 25px;
-    color: #070707;
-    -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
-    clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
-    height: 40px;
-    font-size: 0.7rem;
-    line-height: 14px;
-    letter-spacing: 1.2px;
-    transition: .2s .1s;
-    background-image:  linear-gradient(90deg, #fff, rgb(165, 163, 163));
-    border: 0 solid;
-    overflow: hidden;
-}
-      
-.section-header:hover {
-    cursor: pointer;
-    transition: all .3s ease-in;
-    padding-right: 30px;
-    padding-left: 30px;
-}
-
-.card-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 1rem;
-    /* background-color: rgb(62, 61, 61); */
-}
-
-.card{
+/* General Styles */
+* {
     box-sizing: border-box;
-    width: 31.5%;
-    height: 30rem;
-    /* background-color: rgb(62, 61, 61); */
-    background-image: linear-gradient(90deg, rgb(62, 61, 61),#fff, rgb(62, 61, 61));
-    border: 1px solid white;
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(6px);
-    border-radius: 17px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.5s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-    font-weight: bolder;
-    color: black;
+    margin: 0;
+    padding: 0;
 }
-  
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e0f7fa;
+    padding-top: 50px; /* Adjust to ensure content is not hidden behind the sticky header */
+}
+
+.content {
+    padding: 20px;
+}
+
+/* About Me Section */
+.about-me {
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+.about-me img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.para-about {
+    flex: 1;
+}
+
+.about-me strong {
+    font-weight: bold;
+    color: #00796b;
+}
+
+/* Education Section */
+/* Section Headers Styling */
+.section-header {
+    text-align: center; /* Center align the header text */
+    margin-bottom: 20px; /* Add some spacing below the header */
+    color: #00796b; /* Set the color of the header text */
+    font-size: 24px; /* Adjust the font size of the header */
+    font-weight: bold; /* Make the header text bold */
+    text-transform: uppercase; /* Convert the header text to uppercase */
+}
+
+.sec-abt {
+    max-width: 100%;
+    margin: 2rem auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-in-out forwards 0.2s;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
 .card:hover {
-    border: 1px solid black;
     transform: scale(1.05);
 }
 
-.card:active {
-    transform: scale(0.95) rotateZ(1.7deg);
+.card .inst-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
 }
 
-.inst-logo {
-    width: 80px; /* Set the width of the logo */
-    height: 80px; /* Set the height of the logo */
-    margin-bottom: 6rem; /* Optional: Adjust margin below the logo */
-    margin-top: 0;
-    
+.inst-name, .deg-name {
+    margin: 10px 0;
 }
 
-.img-logo {
-    width: 100%; /* Ensure the image fills its container */
-    height: 100%; /* Ensure the image fills its container */
-    object-fit: cover; /* Maintain aspect ratio and cover container */
-    border-radius: 50%; /* Optional: Apply rounded corners to the image */
+.deg-name hr {
+    border: 1px solid #00796b;
+}
+
+/* Skills Section */
+.skill-div {
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-in-out forwards 0.4s;
 }
 
 .skill-header {
-    width: 30rem;
-    margin: 1rem 25rem;
-    padding-left: 33px;
-    padding-right: 33px;
-    padding-bottom: 16px;
-    padding-top: 16px;
-    border-radius: 9px;
-    background: rgb(62, 61, 61);
-    border: none;
-    /* font-family: inherit; */
-    text-align: center;
-    cursor: pointer;
-    transition: 0.4s;
-}
-   
-.skill-header:hover {
-    box-shadow: 7px 5px 56px -14px #C3D900;
+    margin-bottom: 10px;
+    color: #00796b;
 }
 
-.skill-header:active {
-    transform: scale(0.97);
-    box-shadow: 7px 5px 56px -10px #C3D900;
-}
-
-.skills{
-    width: 100%;
+.skills {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap:wrap-reverse;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.btn {
-    outline: 0;
-    margin: 1rem 2rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #000000;
-    min-width: 200px;
-    border: 0;
-    border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
-    box-sizing: border-box;
-    padding: 16px 20px;
+.skills .btn {
+    padding: 8px 16px; /* Adjust padding */
+    background-color: #00796b;
     color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    overflow: hidden;
+    border: none;
+    border-radius: 20px; /* Increase border-radius */
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    align-items: center; /* Center text vertically */
 }
 
-.btn:hover {
-    opacity: .95;
+.skills .btn:hover {
+    background-color: #005f56;
 }
 
-.btn .animation {
-    border-radius: 100%;
-    animation: ripple 0.6s linear infinite;
+.skills .btn i {
+    margin-right: 8px; /* Adjust margin */
 }
 
-@keyframes ripple {
-    0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-
-    100% {
-    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
-    }
 }
-
-
-
-

@@ -1,14 +1,46 @@
-<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
-<main class="page-container">
-    <div class="about-me">
-        <div class="para-about">
-            <div class="">
-                
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursework</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        /* Additional styling for the coursework page */
+        .semester {
+            margin-bottom: 20px;
+        }
+        .subject {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<%- include('_header.ejs') %>
+
+<main>
+    <div class="container">
+        <h1>B.Tech Curriculum</h1>
+        <div class="btech-tab">
+            <h2>First Year</h2>
+            <div class="semester">
+                <h3>First Semester</h3>
+                <div class="subject">
+                    <p>ETMA-101 Applied Mathematics-I</p>
+                    <!-- Add more subjects as needed -->
+                </div>
+                <!-- Add more subjects as needed -->
             </div>
+            <!-- Add more semesters as needed -->
         </div>
-        <div class="img-container"></div>
+        <!-- Add more years as needed -->
     </div>
-    <div class="education"></div>
-    <div class="projects"></div>
-    <div class="skills"></div>
 </main>
+
+<%- include('_footer.ejs') %>
+
+</body>
+</html>
