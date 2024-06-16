@@ -13,6 +13,11 @@ body {
     padding-top: 50px; /* Adjust to ensure content is not hidden behind the sticky header */
 }
 
+h2{
+    font-size: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+
 .content {
     padding: 20px;
 }
@@ -200,60 +205,6 @@ width: 0;
     height: 50px;
     object-fit: cover;
 }
-
-.inst-name, .deg-name {
-    margin: 10px 0;
-}
-
-.deg-name hr {
-    border: 1px solid #00796b;
-}
-
-/* Skills Section */
-.skill-div {
-    max-width: 90%;
-    margin: 2rem auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease-in-out forwards 0.4s;
-}
-
-.skill-header {
-    margin-bottom: 10px;
-    color: #00796b;
-}
-
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skills .btn {
-    padding: 8px 16px; /* Adjust padding */
-    background-color: #00796b;
-    color: #fff;
-    border: none;
-    border-radius: 20px; /* Increase border-radius */
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    display: flex;
-    align-items: center; /* Center text vertically */
-}
-
-.skills .btn:hover {
-    background-color: #005f56;
-}
-
-.skills .btn i {
-    margin-right: 8px; /* Adjust margin */
-}
-
-
 /* Fade In Animation */
 @keyframes fadeInUp {
     to {
@@ -298,5 +249,9 @@ width: 0;
 /* Style the icon */
 .sub-icon {
     font-size: 20px;
+}
+
+#sub-name{
+    font-size: 1em;
 }
 

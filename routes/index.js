@@ -16,4 +16,5 @@ router.get('/', function(req, res){
 }); 
 
 router.get('/courses',homeController.courses); 
+router.get('/login',homeController.login); 
 module.exports = router;
