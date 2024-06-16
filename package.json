@@ -4,6 +4,7 @@
   "description": "This is a basic website to know about me and everything I can do in the field of web development. ",
   "main": "index.js",
   "scripts": {
+    "start":"nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Harmehar Kaur",
