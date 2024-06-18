@@ -16,5 +16,11 @@ router.get('/', function(req, res){
 }); 
 
 router.get('/courses',homeController.courses); 
-router.get('/login',homeController.login); 
+// router.get('/login',homeController.login); 
+router.get('/journey',homeController.journey); 
+router.get('/blogs',homeController.login); 
+router.get('/poetry',homeController.login); 
+router.get('/contact',homeController.login); 
+
+
 module.exports = router;
