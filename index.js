@@ -11,7 +11,7 @@ const app = express();
 
 const port = 3000;
 const expressLayouts = require('express-ejs-layouts');
-// const db = require('./config/mongoose');
+const db = require('./config/mongoose');
 
 // const session = require('express-session');
 // const passport = require('passport');
@@ -19,7 +19,7 @@ const expressLayouts = require('express-ejs-layouts');
 // const passportJWT = require('./config/passport-jwt-strategy');
 // const passportGoogle = require('./config/passport-google-oauth2-strategy');
 
-// const MongoStore = require('connect-mongo');
+const MongoStore = require('connect-mongo');
 // const flash = require('connect-flash');
 // const customMware = require('./config/middleware');
 

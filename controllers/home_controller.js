@@ -65,21 +65,20 @@ module.exports.blogs =async function(req,res){
 
 module.exports.poetry = function(req,res){
     try{
-        return res.render('courses', {
-            title: "Coursework"
-        });
+        var poems_list = [
+            {
+                Name: "How to deal with changes",
+                content: "From school to college could be a very large journey"
+            },
+            {
+                Name:"Full Stack",
+                content:"My life made me creative"
+            }
 
-    }catch(err){
-        console.log('Error', err);
-        return;
-    }
-    
-}
-
-module.exports.contact = function(req,res){
-    try{
-        return res.render('courses', {
-            title: "Coursework"
+        ]
+        return res.render('poetry', {
+            title: "Poetry",
+            poems:poems_list
         });
 
     }catch(err){
