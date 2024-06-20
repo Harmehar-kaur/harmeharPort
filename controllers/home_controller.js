@@ -40,8 +40,8 @@ module.exports.journey = function(req,res){
 
 module.exports.blogs = function(req,res){
     try{
-        return res.render('courses', {
-            title: "Coursework"
+        return res.render('blogs', {
+            title: "Blogs"
         });
 
     }catch(err){
