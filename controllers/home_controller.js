@@ -38,15 +38,27 @@ module.exports.journey = function(req,res){
     
 }
 
-module.exports.blogs = function(req,res){
-    try{
-        return res.render('blogs', {
-            title: "Blogs"
-        });
+module.exports.blogs =async function(req,res){
+    try {
 
-    }catch(err){
-        console.log('Error', err);
-        return;
+        var blogs = [
+            {
+                Name: "How to deal with changes",
+                content: "From school to college could be a very large journey"
+            },
+            {
+                Name:"Full Stack",
+                content:"My life made me creative"
+            }
+
+        ]
+        // const blogs = await Blog.find({}).exec();
+        res.render('blogs', {
+            title: "Contact List",
+            blog_list:blogs 
+        });
+    } catch (err) {
+        console.log("Error", err);
     }
     
 }

@@ -1,21 +1,69 @@
-.add-form{
+.blog-ls-container {
+    list-style-type: none;
+    padding: 0;
+}
+
+.blogs {
+    background-color: #f0f0f0;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.blogs:hover {
+    background-color: #e0e0e0;
+}
+
+.blog-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.blog-content {
+    font-size: 1em;
+    color: #555;
+}
+
+.add-form {
     display: flex;
     justify-content: center;
     margin: 5em;
 }
 
-.center{
-    text-align: center;
+.card-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
 }
+
 .card {
-    height: 20rem;
+    width: 80%;
+    max-width: 600px;
     background-color: #A8D5BA;
     background-image: linear-gradient(43deg, #A8D5BA 0%, #E2E9C0 46%, #F0F2EB 100%);
     border-top-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    transition: 0.5s ease-in-out;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .heading {
@@ -31,13 +79,15 @@
     transition: 0.5s ease-in-out;
 }
 
-.card input {
+.card input,
+.card textarea {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid black;
-    width: 12rem;
+    width: 100%;
     padding: 8px;
     outline: none;
+    resize: none;
 }
 
 .button-div {
@@ -61,7 +111,8 @@
     box-shadow: rgba(44, 43, 43, 0.664) 5px 5px, rgba(45, 45, 45, 0.3) 10px 10px, rgba(60, 59, 59, 0.2) 15px 15px, rgba(54, 53, 53, 0.1) 20px 20px, rgba(45, 64, 34, 0.05) 25px 25px;
 }
 
-.card input::placeholder {
+.card input::placeholder,
+.card textarea::placeholder {
     color: black;
 }
 
@@ -89,16 +140,16 @@
     box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
     letter-spacing: 0.05em;
     border-radius: 20em;
-  }
-  
-  .cssbuttons-io-button svg {
+}
+
+.cssbuttons-io-button svg {
     margin-right: 6px;
-  }
-  
-  .cssbuttons-io-button:hover {
+}
+
+.cssbuttons-io-button:hover {
     box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
-  }
-  
-  .cssbuttons-io-button:active {
+}
+
+.cssbuttons-io-button:active {
     box-shadow: 0 0.3em 1em -0.5em #14a73e98;
-  }
+}
