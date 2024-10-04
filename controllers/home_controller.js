@@ -14,7 +14,8 @@ module.exports.home = function(req, res){
 
 module.exports.courses = function(req,res){
     try{
-        return res.render('courses', {
+        // const brew = "/harmehar-kaur/views/brew/about.ejs"
+        return res.render('brew/about', {
             title: "Coursework"
         });
 

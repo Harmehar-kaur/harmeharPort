@@ -1,0 +1,33 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
+<li id="post-<%= review._id %>" class="post-card" type="none">
+    <p>
+        <%= review.title%>
+        <br>
+        <%= review.content %>
+        <br>
+        <small>
+            <%= review.user.name %>
+        </small>
+        <br>
+    </p>
+
+    <div class="post-comments">
+        <% if (locals.user) { %>
+            <form id="post-<%= review._id %>-comments-form" class="comment-form" action="/brew-havens/comments/create" method="POST">
+                <input type="text" name="content" placeholder="Type Here to add comment..." required>
+                <input type="hidden" name="post" value="<%= review._id %>">
+                <input type="submit" value="Add">
+            </form>
+        <% } %>
+
+        <div class="post-comments-list">
+            <ul id="post-comments-<%= review._id %>">
+                <% for (comment of review.comments) { %>
+                    <li class="comment">
+                        <%- include('_comment') -%>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</li>

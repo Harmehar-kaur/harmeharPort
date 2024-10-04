@@ -1,0 +1,117 @@
+.order-page-wrapper .top-section {
+    background-color:#483914;
+    color: white;
+    margin-top: 3.6em;
+    padding-top: 1em;
+    border: none;
+}
+
+.card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #eaeaea;
+    margin: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 80rem;
+    width: 100%;
+}
+
+.card-title-order {
+    margin-bottom: 15px;
+}
+
+.card-text {
+    margin-bottom: 0;
+}
+
+.menu-list-item .menu {
+    background-color: #f2f0eb;
+    padding: 0.8em 0.8em 0;
+    color: black;
+}
+
+.menu-list-item .menu .mainViewer {
+    margin: auto;
+    overflow: hidden;
+}
+
+.menu-list-item .menu .mainViewer a {
+    text-decoration: none;
+    margin-right: 3rem;
+}
+
+.menu-list-item .menu .content .item_scroll {
+    padding-left: 35px;
+}
+
+
+.menu-list-item .item_scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    cursor: pointer!important;
+}
+
+.item_scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: none;
+    height: 4rem;
+}
+
+.d-flex {
+    display: flex!important;
+    font-size: 1em;
+}
+
+.menu-list-item .item_scroll .border-right:first-child {
+    padding-left: 0;
+}
+
+.menu-list-item .item_scroll .border-right {
+    background: url(../images/lineSeparator.png) 98% 28% no-repeat;
+    padding: 0 20px;
+}
+
+.menu-list-item .item_scroll .item_btn:first-child {
+    padding-left: 0;
+}
+
+.menu-list-item .item_scroll .menu_btn {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list-item .item_scroll .item_btn {
+    color: #00000094;
+    border-radius: 0;
+    font-family: SoDoSans_Light,Helvetica,sans-serif;
+}
+
+.menu-list-item .item_scroll .item_btn {
+    border: none;
+    background: transparent;
+    margin-right: 15px;
+    color: #919191;
+    font-size: 15px;
+    outline: none;
+    width: max-content;
+    padding: 0 36px;
+}
+
+.all-item{
+    margin-top: 1em;
+}
+

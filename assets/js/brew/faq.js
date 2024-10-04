@@ -1,6 +1,6 @@
-let toggles = document.getElementsByClassName('sub-btn');
-let contentDiv = document.getElementsByClassName('sub-content');
-let icons = document.getElementsByClassName('sub-icon');
+let toggles = document.getElementsByClassName('faq-btn');
+let contentDiv = document.getElementsByClassName('faq-content');
+let icons = document.getElementsByClassName('faq-icon');
 
 for(let i=0; i<toggles.length; i++){
     toggles[i].addEventListener('click', () => {
