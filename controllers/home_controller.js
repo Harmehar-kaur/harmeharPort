@@ -66,20 +66,9 @@ module.exports.blogs =async function(req,res){
 
 module.exports.poetry = function(req,res){
     try{
-        var poems_list = [
-            {
-                Name: "How to deal with changes",
-                content: "From school to college could be a very large journey"
-            },
-            {
-                Name:"Full Stack",
-                content:"My life made me creative"
-            }
-
-        ]
-        return res.render('poetry', {
-            title: "Poetry",
-            poems:poems_list
+        
+        return res.render('skills', {
+            title: "Skills",
         });
 
     }catch(err){
