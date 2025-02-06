@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="css/blog.css">
+<link rel="stylesheet" href="css/education.css">
+
+<section id="blog" class="blog-section">
+    <div class="container">
+        <div class="button">
+            <span class="button_lg">
+                <span class="button_sl"></span>
+                <span class="button_text">Blogs</span>
+            </span>
+        </div>
+        <!-- Blog Form -->
+        <form action="/blogs/add" method="POST" class="blog-form">
+            <h3>Add a New Blog</h3>
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" required>
+
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author" required>
+
+            <label for="content">Content:</label>
+            <textarea name="content" id="content" rows="5" required></textarea>
+
+            <button type="submit">Submit Blog</button>
+        </form>
+
+        <!-- Blog List -->
+        <div class="blog-list">
+            <% blogs.forEach(blog => { %>
+                <article class="blog-post">
+                    <h3 class="blog-title"><%= blog.title %></h3>
+                    <p class="blog-date">Published on: <%= blog.createdAt.toDateString() %></p>
+                    <a href="/blogs/<%= blog._id %>" class="read-more">Read More →</a>
+                </article>
+            <% }); %>
+        </div>
+    </div>
+</section>
