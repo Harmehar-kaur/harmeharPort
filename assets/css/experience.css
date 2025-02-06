@@ -1,0 +1,60 @@
+/* Style for Experience Section */
+#experience {
+    padding: 50px 0;
+}
+
+.icon-box {
+    background: #090909; /* Dark blue background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+}
+
+.icon-box h4 a {
+    color: #00796b; /* Green Title */
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.icon-box h5 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.icon-box p {
+    color: #c9d1d9;
+    font-style: italic;
+}
+
+.icon-box ul {
+    color: #ffffff;
+    padding-left: 20px;
+}
+
+.icon-box ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Ensuring responsiveness */
+@media (max-width: 768px) {
+    .icon-box {
+        padding: 15px;
+    }
+
+    .icon-box h4 a {
+        font-size: 18px;
+    }
+
+    .icon-box h5 {
+        font-size: 14px;
+    }
+}

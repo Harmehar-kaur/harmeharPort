@@ -17,7 +17,7 @@ router.get('/', async function(req, res){
 
 router.get('/education',homeController.courses); 
 // router.get('/login',homeController.login); 
-router.get('/journey',homeController.journey); 
+router.get('/experience',homeController.journey); 
 router.get('/blogs',homeController.blogs); 
 router.get('/poetry',homeController.poetry); 
 // router.get('/contact',homeController.login); 

@@ -28,8 +28,8 @@ module.exports.courses = function(req,res){
 
 module.exports.journey = function(req,res){
     try{
-        return res.render('journey', {
-            title: "Where I stand?"
+        return res.render('experience', {
+            title: "Experience"
         });
 
     }catch(err){
