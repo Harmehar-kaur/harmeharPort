@@ -30,7 +30,13 @@
                 <article class="blog-post">
                     <h3 class="blog-title"><%= blog.title %></h3>
                     <p class="blog-date">Published on: <%= blog.createdAt.toDateString() %></p>
-                    <a href="/blogs/<%= blog._id %>" class="read-more">Read More →</a>
+                    <button class="learn-more" onclick="window.location.href='/blogs/<%= blog._id %>'">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    
                 </article>
             <% }); %>
         </div>

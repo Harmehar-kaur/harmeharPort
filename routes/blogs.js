@@ -1,9 +1,10 @@
 const express = require('express');
-const router = express.Router();
+const blog = express.Router();
+
 const Blog = require('../models/blogs');
 
 // Route to display all blogs & form
-router.get('/', async (req, res) => {
+blog.get('/', async (req, res) => {
     try {
         const blogs = await Blog.find().sort({ createdAt: -1 }); // Fetch blogs sorted by latest first
         res.render('blogs', { 
@@ -16,7 +17,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/:id', async (req, res) => {
+blog.get('/:id', async (req, res) => {
     try {
         const blog = await Blog.findById(req.params.id);
         const t = blog.title;
@@ -25,7 +26,9 @@ router.get('/:id', async (req, res) => {
         }
         res.render('blog-detail', { 
             title:t,
-            blog }); // Render the detailed view
+            blog,
+            // layout: false
+        }); // Render the detailed view
     } catch (err) {
         console.error("Error fetching blog:", err);
         res.status(500).send('Server Error');
@@ -33,7 +36,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Route to handle new blog submission
-router.post('/add', async (req, res) => {
+blog.post('/add', async (req, res) => {
     try {
         const { title, content, author } = req.body;
         if (!title || !content || !author) {
@@ -49,4 +52,4 @@ router.post('/add', async (req, res) => {
     }
 });
 
-module.exports = router;
+module.exports = blog;

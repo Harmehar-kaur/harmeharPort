@@ -1,0 +1,41 @@
+.blog-section {
+    background-color: #131313; /* Dark background */
+    color: #dcdcdc; /* Light gray text */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px auto;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.blog-title {
+    font-size: 2rem;
+    color: #fff; /* White for titles */
+    margin-bottom: 10px;
+}
+
+.blog-meta {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #bdbdbd; /* Slightly lighter gray for readability */
+}
+
+.blog-meta strong {
+    color: #00b894; /* Greenish accent to match the footer links */
+}
+
+.blog-divider {
+    border: none;
+    height: 1px;
+    background-color: #444; /* Soft separator */
+    margin: 15px 0;
+}
+
+.blog-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #dcdcdc; /* Keeping it readable */
+}
+
+

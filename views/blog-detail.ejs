@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="/css/blog-detail.css">
+<section class="blog-section">
+    <h1 class="blog-title"><%= blog.title %></h1>
+    <p class="blog-meta"><strong>By:</strong> <%= blog.author %></p>
+    <p class="blog-meta"><strong>Published on:</strong> <%= blog.createdAt.toDateString() %></p>
+    <hr class="blog-divider">
+    <p class="blog-content"><%= blog.content %></p>
+    <br>
+    
+</section>
