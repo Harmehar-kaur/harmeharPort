@@ -4,30 +4,19 @@
     <div class="left-side">
         <a href="/">Harmehar Kaur</a>
     </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <div class="right-side">
-        <div class="right-side-item-container">
-            <a href="/" class="link">About</a>
-        </div>
-        <div class="right-side-item-container">
-            <a href="/education" class="link">Education</a>
-        </div>
-        <div class="right-side-item-container">
-            <a href="/experience">Experience</a>
-        </div>
-        <div class="right-side-item-container">
-            <a href="/blogs">Blogs</a>
-        </div>
-        <!-- <div class="right-side-item-container">
-            <a href="#" id="login-link" class="link">Projects</a>
-        </div> -->
-        <div class="right-side-item-container">
-            <a href="/skills">Skills</a>
-        </div>
-        <div class="right-side-item-container">
-            <a href="https://drive.google.com/file/d/1vePAmtDA6ccqn5sO4cz30KZnFVXI8NvL/view?usp=drive_link" target="_blank">Resume</a>
-        </div>
-        <div class="right-side-item-container">
-            <a href="/contact">Contact</a>
-        </div>
+        <div class="right-side-item-container"><a href="/">About</a></div>
+        <div class="right-side-item-container"><a href="/education">Education</a></div>
+        <div class="right-side-item-container"><a href="/experience">Experience</a></div>
+        <div class="right-side-item-container"><a href="/blogs">Blogs</a></div>
+        <div class="right-side-item-container"><a href="/skills">Skills</a></div>
+        <div class="right-side-item-container"><a href="https://drive.google.com/file/d/1vePAmtDA6ccqn5sO4cz30KZnFVXI8NvL/view?usp=drive_link" target="_blank">Resume</a></div>
+        <div class="right-side-item-container"><a href="/contact">Contact</a></div>
     </div>
 </header>
+<script>
+    function toggleMenu() {
+    document.querySelector('.right-side').classList.toggle('active');
+}
+</script>
