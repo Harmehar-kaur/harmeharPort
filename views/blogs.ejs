@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="css/blog.css">
 <link rel="stylesheet" href="css/education.css">
-
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <section id="blog" class="blog-section">
     <div class="container">
         <div class="button">
@@ -9,19 +10,20 @@
                 <span class="button_text">Blogs</span>
             </span>
         </div>
-        <!-- Blog Form -->
-        <form action="/blogs/add" method="POST" class="blog-form">
+        <form action="/blogs/add" method="POST" class="blog-form" onsubmit="return sanitizeForm()">
             <h3>Add a New Blog</h3>
+            
             <label for="title">Title:</label>
             <input type="text" name="title" id="title" required>
-
+        
             <label for="author">Author:</label>
-            <input type="text" name="author" id="author" required>
-
+            <input type="text" name="author" id="author" required oninput="validateAuthor()">
+        
             <label for="content">Content:</label>
-            <textarea name="content" id="content" rows="5" required></textarea>
-
-            <button type="submit">Submit Blog</button>
+            <div id="editor"></div>
+            <input type="hidden" name="content" id="content">
+        
+            <button type="submit" id="submit-btn" disabled>Submit Blog</button>
         </form>
 
         <!-- Blog List -->
@@ -42,3 +44,46 @@
         </div>
     </div>
 </section>
+<script>
+    // Initialize Quill Editor
+    var quill = new Quill('#editor', {
+        theme: 'snow',
+        placeholder: 'Write your blog here...',
+        modules: {
+            toolbar: [
+                [{ header: [1, 2, false] }],
+                ['bold', 'italic', 'underline'], 
+                [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                ['link']
+            ]
+        }
+    });
+
+    function validateAuthor() {
+        let authorInput = document.getElementById("author").value.trim();
+        document.getElementById("submit-btn").disabled = (authorInput !== "Harmehar Kaur");
+    }
+
+    function sanitizeForm() {
+        let title = document.getElementById("title").value.trim();
+        let author = document.getElementById("author").value.trim();
+        let contentHTML = quill.root.innerHTML;
+
+        // Simple sanitization to prevent script injections
+        let tempDiv = document.createElement("div");
+        tempDiv.innerText = title;
+        let safeTitle = tempDiv.innerHTML;
+
+        tempDiv.innerText = author;
+        let safeAuthor = tempDiv.innerHTML;
+
+        // Set sanitized content to hidden input field
+        document.getElementById("content").value = contentHTML;
+
+        // Assign sanitized values
+        document.getElementById("title").value = safeTitle;
+        document.getElementById("author").value = safeAuthor;
+
+        return true;
+    }
+</script>
